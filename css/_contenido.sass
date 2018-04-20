@@ -1,0 +1,32 @@
+@impor '_variables.sass'
+.contenido
+	background: grey
+	width: 70%
+	height: auto
+	margin-left: 30%
+	span
+		background: grey
+		width: 300px
+		height: 300px
+		margin: 50px
+	.intro
+		@include diagrama_content(green)
+	.portafolio
+		@include diagrama_content(purple)
+	.ilustracion
+		@include diagrama_content(orange)
+	.diagramacion
+		@include diagrama_content(black)
+	.web
+		@include diagrama_content(yellow)
+	.acerca
+		@include diagrama_content(blue)
+	.mensaje
+		@include diagrama_content(red)
+	
+@media screen and (max-width: 800px)
+	.contenido
+		margin-left: 0
+		width: 100%
+
+

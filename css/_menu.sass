@@ -1,0 +1,131 @@
+@import '_variables.sass'
+.menu-bar
+	display: none
+	background: $blue
+	width: 100%
+	padding: 2%
+	position: fixed
+	a
+		color: white
+		font-size: 1.5em
+		margin-right: 5%
+.header
+	background: $blue
+	color: white
+	height: 100%
+	width: 30%
+	position: fixed
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	align-content: space-between
+	overflow: scroll
+	overflow-x: hidden
+	.caja-arriba
+		width: 80%
+		margin-top: 20%
+		.cabecera
+			position: relative
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			padding: 5% 5% 30% 5%
+			p
+				font-size: .7em
+				text-align: right
+			figure
+				img
+					position: absolute
+					left: -10%
+					top: -30%
+					width: 50%
+	.menu
+		margin-top: 30%
+		ul
+			margin-top: 5%
+		li
+			padding: 5% 0 5% 5%
+			font-size: 1em
+			padding: 5%
+			position: relative
+			.menu-down
+				display: none
+				positiona: absolute
+				background: $blue
+				z-index: 1
+			a
+				color: white
+				display: flex
+				justify-content: space-between
+				align-items: center
+			a.color-icon:hover
+				color: $orange
+	.color-icon
+		opacity: .7
+		font-size: 1em
+		color: white
+		&:active
+			color: $orange
+	.caja-abajo
+		width: 100%
+		height: 20%
+	.footer
+		width: 70%
+		margin: 7% 0
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+
+@media screen and (max-width: 800px)
+	.menu-bar
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	.header
+		width: 40%
+		height: 100%
+		padding: 0
+		left: -100%
+		.caja-arriba
+			margin: 10% 5% 5% 5%
+			.cabecera
+				figure
+					img
+						top: -10%
+		.caja-abajo
+			margin: 0 5%
+		.footer
+			margin: 5%
+@media screen and (max-width: 500px)
+	.menu-bar
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	.header
+		margin-top: 10%
+		width: 80%
+		height: 95%
+		padding: 0
+		left: -100%
+		.caja-arriba
+			margin: 10% 5% 5% 5%
+			.cabecera
+				figure
+					img
+						top: -20%
+		.caja-abajo
+			margin: 0 5%
+		.footer
+			margin: 5%
+
+
+
+
+					
+					
+
+
+
+
