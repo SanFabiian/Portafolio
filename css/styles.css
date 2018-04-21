@@ -10,7 +10,7 @@ body {
   height: 100%; }
 
 h1 {
-  font-size: 1em;
+  font-size: 150%;
   text-align: right;
   width: 100%; }
 
@@ -31,7 +31,7 @@ h1 {
     z-index: 10; }
   .menu-bar a {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-right: 5%; }
 
 .header {
@@ -57,7 +57,7 @@ h1 {
       justify-content: space-between;
       padding: 5% 5% 30% 5%; }
       .header .caja-arriba .cabecera p {
-        font-size: 0.7em;
+        font-size: 0.7rem;
         text-align: right; }
       .header .caja-arriba .cabecera figure img {
         position: absolute;
@@ -65,12 +65,12 @@ h1 {
         top: -30%;
         width: 50%; }
   .header .menu {
-    margin-top: 30%; }
+    margin-top: 25%; }
     .header .menu ul {
       margin-top: 5%; }
     .header .menu li {
       padding: 5% 0 5% 5%;
-      font-size: 1em;
+      font-size: 1rem;
       padding: 5%;
       position: relative; }
       .header .menu li .menu-down {
@@ -87,7 +87,7 @@ h1 {
         color: #FF5A00; }
   .header .color-icon {
     opacity: 0.7;
-    font-size: 1em;
+    font-size: 1rem;
     color: white; }
     .header .color-icon:active {
       color: #FF5A00; }
@@ -96,11 +96,26 @@ h1 {
     height: 20%; }
   .header .footer {
     width: 70%;
-    margin: 7% 0; }
+    margin: 5% 0;
+    text-align: center; }
+    .header .footer h3 {
+      margin: 5% 0 0 0;
+      font-size: 0.7rem;
+      font-weight: 100; }
     .header .footer ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; }
+
+/*Efectos de menu */
+.headroom {
+  transition: transform 0.3s ease; }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%); }
 
 @media screen and (max-width: 800px) {
   .menu-bar {
@@ -140,11 +155,11 @@ h1 {
     .header .caja-abajo {
       margin: 0 5%; }
     .header .footer {
-      margin: 5%; } }
+      margin: 10%; } }
 @impor '_variables.sass';
 .contenido {
   position: relative;
-  background: #E8E8E8;
+  background: #CCCCCC;
   width: 70%;
   height: auto;
   margin-left: 30%;
@@ -155,71 +170,12 @@ h1 {
   box-sizing: border-box;
   z-index: -10;
   overflow: hidden; }
-  .contenido span {
-    background: grey;
-    width: 25%;
-    height: 200px;
-    margin: 5% 1%; }
   .contenido img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; }
   .contenido .intro {
-    background: white;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 3%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    padding: 25% 5%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between; }
-    .contenido .intro h2 {
-      z-index: 1000;
-      text-align: center;
-      font-size: 3em;
-      font-weight: 300; }
-  .contenido .ilustracion {
-    background: orange;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 3%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
-  .contenido .diagramacion {
-    background: purple;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 3%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
-  .contenido .web {
-    background: yellow;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 3%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
-  .contenido .acerca {
-    background: blue;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 3%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
-  .contenido .mensaje {
     background: #E8E8E8;
     width: 100%;
     height: auto;
@@ -228,15 +184,175 @@ h1 {
     justify-content: space-around;
     margin-bottom: 3%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 25% 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; }
+    .contenido .intro h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .intro h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
+    .contenido .intro h2 {
+      z-index: 1000;
+      text-align: center;
+      font-size: 200%;
+      font-weight: 300; }
+  .contenido .ilustracion {
+    background: #CCCCCC;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+    .contenido .ilustracion h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .ilustracion h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
+    .contenido .ilustracion .galeria {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      justify-content: space-around;
+      align-content: space-around;
+      padding-bottom: 10%;
+      box-sizing: border-box; }
+      .contenido .ilustracion .galeria li {
+        width: 25%;
+        margin: 10px; }
+        .contenido .ilustracion .galeria li a img {
+          position: relative;
+          width: 100%; }
+  .contenido .diagramacion {
+    background: #E8E8E8;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+    .contenido .diagramacion h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .diagramacion h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
+  .contenido .web {
+    background: #CCCCCC;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+    .contenido .web h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .web h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
+  .contenido .acerca {
+    background: #E8E8E8;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+    .contenido .acerca h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .acerca h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
+  .contenido .mensaje {
+    background: #CCCCCC;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
     margin-bottom: 0;
     box-shadow: none;
     height: 100%; }
+    .contenido .mensaje h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 5%;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .contenido .mensaje h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 5% 0 0 5%;
+      text-align: left;
+      display: block;
+      width: 100%; }
 
 .formulario {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 5% 0;
+  padding: 5%;
   box-sizing: border-box;
   height: 100%; }
   .formulario div {
@@ -273,8 +389,14 @@ h1 {
       font-size: 1.2rem; }
   .formulario .enviar {
     height: 40%;
-    justify-content: center;
+    display: block;
+    text-align: center;
     margin-bottom: 3%; }
+    .formulario .enviar h3 {
+      margin: 5% 0 0 0;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-align: center; }
   .formulario .botones01 {
     width: 15rem;
     height: 3rem;
@@ -286,6 +408,16 @@ h1 {
   .contenido {
     margin-left: 0;
     width: 100%; }
+    .contenido .intro h2 {
+      font-size: 200%; }
+    .contenido img {
+      margin-top: 2%; } }
+@media screen and (max-width: 400px) {
+  .contenido {
+    margin-left: 0;
+    width: 100%; }
+    .contenido .intro h2 {
+      font-size: 150%; }
     .contenido img {
       margin-top: 2%; } }
 

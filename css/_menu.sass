@@ -10,7 +10,7 @@
 		z-index: 10
 	a
 		color: white
-		font-size: 1.5em
+		font-size: 1.5rem
 		margin-right: 5%
 .header
 	background: $blue
@@ -35,7 +35,7 @@
 			justify-content: space-between
 			padding: 5% 5% 30% 5%
 			p
-				font-size: .7em
+				font-size: .7rem
 				text-align: right
 			figure
 				img
@@ -44,12 +44,12 @@
 					top: -30%
 					width: 50%
 	.menu
-		margin-top: 30%
+		margin-top: 25%
 		ul
 			margin-top: 5%
 		li
 			padding: 5% 0 5% 5%
-			font-size: 1em
+			font-size: 1rem
 			padding: 5%
 			position: relative
 			.menu-down
@@ -66,7 +66,7 @@
 				color: $orange
 	.color-icon
 		opacity: .7
-		font-size: 1em
+		font-size: 1rem
 		color: white
 		&:active
 			color: $orange
@@ -75,12 +75,23 @@
 		height: 20%
 	.footer
 		width: 70%
-		margin: 7% 0
+		margin: 5% 0
+		text-align: center
+		h3
+			margin: 5% 0 0 0
+			font-size: .7rem
+			font-weight: 100
 		ul
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-between
-
+/*Efectos de menu*/
+.headroom
+	transition: transform .3s ease
+.headroom--pinned
+	transform: translateY(0%)
+.headroom--unpinned
+	transform: translateY(-100%)
 
 @media screen and (max-width: 800px)
 	.menu-bar
@@ -122,7 +133,7 @@
 		.caja-abajo
 			margin: 0 5%
 		.footer
-			margin: 5%
+			margin: 10%
 
 
 

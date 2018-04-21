@@ -12,18 +12,13 @@
 	box-sizing: border-box
 	z-index: -10
 	overflow: hidden
-	span
-		background: grey
-		width: 25%
-		height: 200px
-		margin: 5% 1%
 	img
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 	.intro
-		@include diagrama_content(white)
+		@include diagrama_content($light_grey)
 		padding: 25% 5%
 		box-sizing: border-box
 		display: flex
@@ -31,16 +26,34 @@
 		h2
 			z-index: 1000
 			text-align: center
-			font-size: 3em
+			font-size: 200%
 			font-weight: 300
 	.ilustracion
-		@include diagrama_content(orange)
+		@include diagrama_content($grey)
+		.galeria
+			width: 100%
+			height: auto
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			justify-content: space-around
+			align-content: space-around
+			padding-bottom: 10%
+			box-sizing: border-box
+			li
+				width: 25%
+				margin: 10px
+				a
+					img
+						position: relative
+						width: 100%
+		
 	.diagramacion
-		@include diagrama_content(purple)
+		@include diagrama_content($light_grey)
 	.web
-		@include diagrama_content(yellow)
+		@include diagrama_content($grey)
 	.acerca
-		@include diagrama_content(blue)
+		@include diagrama_content($light_grey)
 	.mensaje
 		@include diagrama_content($grey)
 		margin-bottom: 0
@@ -51,7 +64,7 @@
 	display: flex
 	flex-wrap: wrap	
 	justify-content: space-around
-	padding: 5% 0
+	padding: 5%
 	box-sizing: border-box
 	height: 100%
 	div
@@ -88,8 +101,14 @@
 			font-size: 1.2rem
 	.enviar
 		height: 40%
-		justify-content: center
+		display: block
+		text-align: center
 		margin-bottom: 3%
+		h3
+			margin: 5% 0 0 0
+			font-size: .7rem
+			font-weight: 500
+			text-align: center
 	.botones01
 		width: 15rem
 		height: 3rem
@@ -100,6 +119,18 @@
 	.contenido
 		margin-left: 0
 		width: 100%
+		.intro
+			h2
+				font-size: 200%
+		img
+			margin-top: 2%
+@media screen and (max-width: 400px)
+	.contenido
+		margin-left: 0
+		width: 100%
+		.intro
+			h2
+				font-size: 150%
 		img
 			margin-top: 2%
 
