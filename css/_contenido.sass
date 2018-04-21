@@ -1,32 +1,106 @@
 @impor '_variables.sass'
 .contenido
-	background: grey
+	position: relative
+	background: $grey
 	width: 70%
 	height: auto
 	margin-left: 30%
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	padding: 0
+	box-sizing: border-box
+	z-index: -10
+	overflow: hidden
 	span
 		background: grey
-		width: 300px
-		height: 300px
-		margin: 50px
+		width: 25%
+		height: 200px
+		margin: 5% 1%
+	img
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
 	.intro
-		@include diagrama_content(green)
-	.portafolio
-		@include diagrama_content(purple)
+		@include diagrama_content(white)
+		padding: 25% 5%
+		box-sizing: border-box
+		display: flex
+		justify-content: space-between
+		h2
+			z-index: 1000
+			text-align: center
+			font-size: 3em
+			font-weight: 300
 	.ilustracion
 		@include diagrama_content(orange)
 	.diagramacion
-		@include diagrama_content(black)
+		@include diagrama_content(purple)
 	.web
 		@include diagrama_content(yellow)
 	.acerca
 		@include diagrama_content(blue)
 	.mensaje
-		@include diagrama_content(red)
-	
+		@include diagrama_content($grey)
+		margin-bottom: 0
+		box-shadow: none
+		height: 100%
+
+.formulario
+	display: flex
+	flex-wrap: wrap	
+	justify-content: space-around
+	padding: 5% 0
+	box-sizing: border-box
+	height: 100%
+	div
+		width: 100%
+		display: flex
+		justify-content: space-around
+		align-items: center
+	.datos
+		height: 30%
+		margin-bottom: 3%
+		input
+			width: 40%
+			height: 3rem
+			border-radius: 10px
+			border: 1px solid $orange
+			padding: 20px
+			box-sizing: border-box
+			font-size: 1.2rem
+	.intereses
+		height: 30%
+		justify-content: space-around
+		margin-bottom: 3%
+	.texto
+		height: 40%
+		justify-content: center
+		margin-bottom: 3%
+		textarea
+			width: 80%
+			height: 10rem
+			border-radius: 10px
+			border: 1px solid $orange
+			padding: 20px
+			box-sizing: border-box
+			font-size: 1.2rem
+	.enviar
+		height: 40%
+		justify-content: center
+		margin-bottom: 3%
+	.botones01
+		width: 15rem
+		height: 3rem
+		background: $orange
+		color: white
+		border: none
 @media screen and (max-width: 800px)
 	.contenido
 		margin-left: 0
 		width: 100%
+		img
+			margin-top: 2%
 
 

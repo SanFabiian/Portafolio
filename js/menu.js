@@ -1,7 +1,7 @@
 $(document).ready(main);
 var contador = 1;
 function main(){
-	$('.bt-menu').click(function(){
+	$('.menu-bar').click(function(){
 		if(contador == 1){
 			$('header').animate({
 				left: '0'
