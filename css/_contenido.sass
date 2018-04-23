@@ -1,6 +1,5 @@
 @impor '_variables.sass'
 .contenido
-	position: relative
 	background: $grey
 	width: 70%
 	height: auto
@@ -12,14 +11,8 @@
 	box-sizing: border-box
 	z-index: -10
 	overflow: hidden
-	img
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
 	.intro
 		@include diagrama_content($light_grey)
-		padding: 25% 5%
 		box-sizing: border-box
 		display: flex
 		justify-content: space-between
@@ -28,30 +21,19 @@
 			text-align: center
 			font-size: 200%
 			font-weight: 300
+		img
+			position: relative
+			width: 100%
+	
 	.ilustracion
 		@include diagrama_content($grey)
-		.galeria
-			width: 100%
-			height: auto
-			display: flex
-			flex-wrap: wrap
-			position: relative
-			justify-content: space-around
-			align-content: space-around
-			padding-bottom: 10%
-			box-sizing: border-box
-			li
-				width: 25%
-				margin: 10px
-				a
-					img
-						position: relative
-						width: 100%
-		
+		@include galeria
 	.diagramacion
 		@include diagrama_content($light_grey)
-	.web
+		@include galeria
+	.modelado-3d
 		@include diagrama_content($grey)
+		@include galeria
 	.acerca
 		@include diagrama_content($light_grey)
 	.mensaje
@@ -59,7 +41,34 @@
 		margin-bottom: 0
 		box-shadow: none
 		height: 100%
-
+.ventana-galeria
+	display: block
+	background: rgba(0,0,0,.8)
+	width: 100%
+	height: auto
+	text-align: center
+	font-size: 1.5rem
+	padding: 5%
+	box-sizing: border-box
+	position: absolute
+	z-index: 10
+	h3
+		display: inline
+		color: white
+		font-weight: 300
+	img
+		width: 100%
+		max-width: 100%
+		position: relative
+		flex-shrink: 2
+	.imagen-abierta
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+	span
+		color: white
+		margin: 2%
 .formulario
 	display: flex
 	flex-wrap: wrap	
