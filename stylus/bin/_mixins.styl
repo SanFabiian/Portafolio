@@ -1,8 +1,18 @@
-flex_position(dis,direc,justi,align)
+flex_position(dis = flex,direc = row,justi = center,align = center)
     display dis
     flex-direction direc
     justify-content justi
     align-items align
+
+burgerNavIco(position, pTop = 0)
+    width 12rem
+    height 12rem
+    position position
+    top pTop
+    right 1rem
+    background alpha(color_light, .2)
+    border-radius 50%
+    color color_light
 
 tone(dark = true)
     if dark

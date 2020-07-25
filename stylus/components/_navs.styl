@@ -1,0 +1,49 @@
+.nav
+    width 100vw
+    position fixed
+    top -10%
+    background alpha(color_third, .95)
+    transform translateY(-100%)
+    color color_light
+.nav__list
+    height 50vh + 10%
+    margin-top: 5rem
+    flex_position(flex,column,flex-end,flex-start)
+    h2
+        font-size font_size-subtitle
+        padding 0 6rem
+    li
+        width 100%
+    a
+        display block
+        font-size font_size-subtitle - 1rem
+        color color_light
+        width 100%
+        padding 6rem 10rem
+.nav__icon
+    burgerNavIco(absolute, 22rem)
+    flex_position()
+	i
+		font-size 8rem
+.navActive
+    animation-name navActive
+    animation-duration .7s
+    animation-fill-mode forwards
+@keyframes navActive
+    from
+        transform translateY(-100%)
+    50%
+        transform translateY(10%)
+    to
+        transform translateY(0)
+.navNoActive
+    animation-name navNoActive
+    animation-duration .7s
+    animation-fill-mode forwards
+@keyframes navNoActive
+    from
+        transform translateY(0)
+    50%
+        transform translateY(10%)
+    to
+        transform translateY(-100%)

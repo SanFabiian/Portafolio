@@ -1,10 +1,4 @@
-header.header
-	section.header__container
-		div.header__profile
-			figure: img(src='images/avatar.png')
-			h1 Fabían Sandobal
-			h3 #{profession}
-		nav.header__nav
-			ul
-				each list in listServices
-					li(href='#'+list)= list
+header(class='header' )
+	h1 Fabian Sandobal
+	div(class='header__icon' id='btnOpen')
+		i(class= icons[0])

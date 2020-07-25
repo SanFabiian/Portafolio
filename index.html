@@ -7,22 +7,29 @@
   </head>
   <body>
     <header class="header">
-      <section class="header__container">
-        <div class="header__profile">
-          <figure><img src="images/avatar.png"></figure>
-          <h1>Fabían Sandobal</h1>
-          <h3>Diseñador Gráfico, Desarrollador Frontend, Ilustrador</h3>
-        </div>
-        <nav class="header__nav">
-          <ul>
-            <li href="#Diseño">Diseño</li>
-            <li href="#Desarrollo web">Desarrollo web</li>
-            <li href="#Ilustracion">Ilustracion</li>
-            <li href="#otras">otras</li>
-          </ul>
-        </nav>
-      </section>
+      <h1>Fabian Sandobal</h1>
+      <div class="header__icon" id="btnOpen"><i class="fas fa-hamburger"></i></div>
     </header>
+    <nav class="nav" id="btnNav">
+      <div class="nav__icon" id="btnClose"><i class="fas fa-times"></i></div>
+      <ul class="nav__list">
+        <li>
+          <h2>Servicios</h2>
+        </li>
+        <li><a href="#Disign">Diseño Gráfico</a></li>
+        <li><a href="#web">Desarrollo web</a></li>
+        <li><a href="#illustration">Ilustración</a></li>
+        <li><a href="#more">otras</a></li>
+      </ul>
+    </nav>
+    <main class="hero">
+      <section class="profile">
+        <div class="profile__container">
+          <figure><img src="images/avatar.png"></figure>
+          <h1>Fabían Sandobal</h1><span>Diseñador Gráfico </span><span>Desarrollador Web</span><span>Ilustrador</span>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <ul>
         <li><a href="#"><i class="footer__icos far fa-envelope"></i></a></li>
@@ -35,5 +42,6 @@
       </ul>
     </footer>
     <script src="https://kit.fontawesome.com/bc6df4c6ba.js" crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

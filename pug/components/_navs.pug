@@ -1,0 +1,9 @@
+nav(class='nav' id='btnNav')
+	div(class='nav__icon' id='btnClose')
+		i(class= icons[1])
+	ul.nav__list
+		li
+			h2 Servicios
+		each list in listServices
+			li
+				a(href='#'+list.id)= list.name
