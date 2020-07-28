@@ -4,15 +4,15 @@ flex_position(dis = flex,direc = row,justi = center,align = center)
     justify-content justi
     align-items align
 
-burgerNavIco(position, pTop = 0)
-    width 12rem
-    height 12rem
+burgerNavIco(position, pTop = 0, bg = color_light,font_c = color_light)
+    width size_icos
+    height size_icos
     position position
     top pTop
-    right 1rem
-    background alpha(color_light, .2)
+    right .1rem
+    background bg
     border-radius 50%
-    color color_light
+    color font_c
 
 tone(dark = true)
     if dark

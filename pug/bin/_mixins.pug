@@ -1,0 +1,9 @@
+mixin item(img,titulo,description)
+	section.items__container
+		div.item
+			picture
+				img(src=img)
+			div.item__texts
+				h3=titulo
+				p=description
+			button(class='btn btn-primary') Ver más

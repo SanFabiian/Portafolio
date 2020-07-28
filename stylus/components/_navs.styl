@@ -7,24 +7,24 @@
     color color_light
 .nav__list
     height 50vh + 10%
-    margin-top: 5rem
+    margin-top: size_padding * 2
     flex_position(flex,column,flex-end,flex-start)
     h2
         font-size font_size-subtitle
-        padding 0 6rem
+        padding 0 (size_padding * 3)
     li
         width 100%
     a
         display block
-        font-size font_size-subtitle - 1rem
+        font-size font_size-subtitle
         color color_light
         width 100%
-        padding 6rem 10rem
+        padding (size_padding * 3) 1rem
 .nav__icon
-    burgerNavIco(absolute, 22rem)
+    burgerNavIco(absolute, 2.2rem,alpha(color_light, .2))
     flex_position()
 	i
-		font-size 8rem
+		font-size font_size-title
 .navActive
     animation-name navActive
     animation-duration .7s
