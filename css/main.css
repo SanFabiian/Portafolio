@@ -7,12 +7,6 @@
   box-sizing: border-box;
   font-size: 100px;
 }
-body {
-  height: 100vh;
-  display: grid;
-  gap: 0.1rem;
-  grid-template-rows: 1.5rem auto 1fr auto;
-}
 .btn {
   font-size: 0.6rem;
   padding: 0.2rem;
@@ -27,6 +21,11 @@ body {
   color: #fff;
   width: 50%;
   justify-self: center;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1.5rem auto 1fr auto;
 }
 .header {
   color: #0064b4;
@@ -238,13 +237,6 @@ i {
 }
 .item img {
   width: 100%;
-}
-.item button {
-  font-size: 0.8rem;
-  background: #f07823;
-  border: solid 2px #f07823;
-  color: #fff;
-  padding: 0.2rem;
 }
 .item__texts {
   padding: 0.6rem;
