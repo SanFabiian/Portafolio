@@ -1,30 +1,32 @@
 .nav
-    width 100vw
+    width 100%
+    height 60%
     position fixed
     top -10%
+    display flex
+    align-items flex-end
     background alpha(color_third, .95)
     transform translateY(-100%)
     color color_light
 .nav__list
-    height 50vh + 10%
-    margin-top: size_padding * 2
+    width 100%
     flex_position(flex,column,flex-end,flex-start)
     h2
         font-size font_size-subtitle
-        padding 0 (size_padding * 4)
+        padding 0 10%
     li
         width 100%
     a
         display block
-        font-size font_size-subtitle
+        font-size font_size-paragraph
         color color_light
         width 100%
-        padding (size_padding * 3) 6rem
+        padding 5% 15%
 .nav__icon
-    burgerNavIco(absolute, 22rem,alpha(color_light, .2))
+    burgerNavIco(absolute, 9rem,alpha(color_light, .2))
     flex_position()
-	i
-		font-size font_size-title
+	img
+		width size_icos
 .navActive
     animation-name navActive
     animation-duration .7s

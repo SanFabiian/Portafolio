@@ -1,8 +1,8 @@
 footer.footer
 	ul
-		each list in icoSocialMedia
+		each val in icoSocialMedia
 			li
-				a(href='#')
-					i(class='footer__icos '+ list)
-	h6 Copyright by / 
+				a(href=val.href target='blank')
+					img(src='images/icons/ico-'+val.src alt=val.name)
+	h6 Copyright by /
 		span SanFabian

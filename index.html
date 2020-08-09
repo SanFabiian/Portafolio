@@ -2,15 +2,16 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SanFabian Design</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__icon" id="btnOpen"><i class="fas fa-hamburger"></i></div>
+      <div class="header__icon" id="btnOpen"><img src="images/icons/ico-burger.svg" alt="Icono Burger"></div>
     </header>
     <nav class="nav" id="btnNav">
-      <div class="nav__icon" id="btnClose"><i class="fas fa-times"></i></div>
+      <div class="nav__icon" id="btnClose"><img src="images/icons/ico-x.svg" alt="Icono Cerrar"></div>
       <ul class="nav__list">
         <li>
           <h2>Servicios</h2>
@@ -30,90 +31,17 @@
       </div>
     </section>
     <main class="hero">
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps40.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps41.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps42.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps43.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps44.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps45.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps46.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps47.jpg"/></picture>
-          <div class="item__texts">
-            <h3>titulo imagen 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn btn-primary">Ver más</button>
-        </div>
-      </section>
-      <section class="items__container">
-        <div class="item">
-          <picture><img class="imgG" src="images/ps48.jpg"/></picture>
-          <div class="item__texts">
+      <section class="cards__container">
+        <div class="card">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/ps40-lg.jpg"/>
+            <source media="(min-width: 1000px)" srcset="images/ps40-md.jpg"/>
+            <source media="(min-width: 600px)" srcset="images/ps40-sm.jpg"/><img class="imgG" src="images/ps40-sm.jpg" alt="Proyecto"/>
+            <div class="badge-wrap">
+              <div class="badge badge-one">Ilustrator</div>
+            </div>
+          </picture>
+          <div class="card__texts">
             <h3>titulo imagen 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
@@ -123,21 +51,20 @@
     </main>
     <footer class="footer">
       <ul>
-        <li><a href="#"><i class="footer__icos far fa-envelope"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-github"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-whatsapp"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-behance"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="footer__icos fab fa-instagram"></i></a></li>
+        <li><a href="sanfabiian@gmail.com" target="blank"><img src="images/icons/ico-email.svg" alt="Icono Correo"></a></li>
+        <li><a href="https://github.com/SanFabiian" target="blank"><img src="images/icons/ico-github.svg" alt="Icono GitHub"></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=573178221581" target="blank"><img src="images/icons/ico-whatsapp.svg" alt="Icono Whatsapp"></a></li>
+        <li><a href="https://www.facebook.com/SanFabiianDev" target="blank"><img src="images/icons/ico-facebook.svg" alt="Icono Facebook"></a></li>
+        <li><a href="https://www.behance.net/SanFabiian" target="blank"><img src="images/icons/ico-behance.svg" alt="Icono Behance"></a></li>
+        <li><a href="https://twitter.com/SanFabiian" target="blank"><img src="images/icons/ico-twitter.svg" alt="Icono Twitter"></a></li>
+        <li><a href="https://www.instagram.com/sanfabiian/" target="blank"><img src="images/icons/ico-instagram.svg" alt="Icono instagram"></a></li>
       </ul>
-      <h6>Copyright by / <span>SanFabian</span></h6>
+      <h6>Copyright by /<span>SanFabian</span></h6>
     </footer>
     <div class="imgModal">
-      <div class="modal__icon" id="imgModalClose"><i class="fas fa-times"></i></div>
+      <div class="modal__icon" id="imgModalClose"><i class="x.svg"></i></div>
       <div class="imgModal__container">aca va el contenido del modal</div>
     </div>
-    <script src="https://kit.fontawesome.com/bc6df4c6ba.js" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
     <script src="js/galery.js"></script>
   </body>

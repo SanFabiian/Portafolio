@@ -1,9 +1,14 @@
-mixin card(img,titulo,description)
-	section.items__container
-		div.item
+mixin card(sm,md,lg,titulo,description)
+	section.cards__container
+		div.card
 			picture
-				img(src='images/'+img class='imgG')
-			div.item__texts
+				source(media='(min-width: 1200px)' srcset='images/'+lg)
+				source(media='(min-width: 1000px)' srcset='images/'+md)
+				source(media='(min-width: 600px)' srcset='images/'+sm)
+				img(src='images/'+sm class='imgG' alt='Proyecto')
+				div(class='badge-wrap')
+					div(class='badge badge-one') Ilustrator
+			div.card__texts
 				h3=titulo
 				p=description
 			button(class='btn btn-primary') Ver más
